@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+.centerDiv{
+  margin: 0 1rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mine,
+.enemy {
+  display: flex;
+  font-family: monospace;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mine {
+  justify-content: flex-end;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.enemy {
+  justify-content: flex-start;
+}
+.mineMsg,
+.enemyMsg {
   display: flex;
   flex-direction: column;
+}
+.mineMsg p{
+    margin: 0 0.5rem 0 auto;
+}
+.name {
+  margin-left: 0.5rem;
+  color: #999999;
+}
+.myImgAndText,
+.enemyImgAndText {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fafafa;
+}
+.myImgAndText {
+  flex-direction: row-reverse;
+}
+.profileImg {
+  width: 40px;
+  border-radius: 50%;
+  margin: 0.1rem 0.7rem 0.5rem 0.5rem;
+  border: 0.7px solid #fafafa;
+}
+.text {
+  background-color: #252525;
+  padding: 1rem;
+  border-radius: 25px;
+}
+.myText {
+  background-color: #2971e7;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.formDiv{
+    width: 100%;
+    margin:0;
+    position: absolute;
+    bottom: 0;
+
+
+}
+.formDiv form{
+    display: flex;
+    border: none;
+    text-decoration: none;
+
+} 
+.formDiv input{
+    width: 90%;
+    background-color: #252525;
+    margin: 0;
+    border: none;
+    font-size: 1.2rem;
+    padding : 1rem 1rem 1rem 2rem;
+    color: #F9F9F9;
+    font-family: monospace;
+
+}
+input:focus{
+    outline: none;
+}
+.submitBtn{
+    background-color:#252525;
+    width: 10%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border: none;
+    margin: 0;
+}
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+button {
+    border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:focus {
+    border: none;
+    outline: none;
+}
+
+button:focus{
+    outline:none !important;
 }

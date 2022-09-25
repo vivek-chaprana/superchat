@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
 
+//firebase
+// import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+import {auth} from './firebase'
+import {useAuthState} from 'react-firebase-hooks/auth'
+import Navbar from './Components/Navbar';
+import Chat from './Components/Chat';
+import styled from 'styled-components';
+import NotSignIn from './Components/NotSignIn/NotSignIn';
+
+const Box = styled.div`
+`
+
+
 function App() {
+
+  const [user] = useAuthState(auth);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box >
+    <Navbar />
+    {user? <Chat /> : <NotSignIn />}
+    </Box>
   );
 }
 
