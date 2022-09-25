@@ -38,13 +38,16 @@ cursor:pointer;
   }
 
   @media (max-width: 600px){
+    padding:.7rem;
+
+  }
+  @media (max-width:480px){
     p{
       display: none;
     }
     img{
       margin:0;
     }
-
   }
 `
 

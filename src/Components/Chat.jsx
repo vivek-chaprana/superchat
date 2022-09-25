@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Message from './Message'
 import {db} from '../firebase'
 import {query, collection, orderBy, onSnapshot} from 'firebase/firestore'
@@ -9,11 +9,14 @@ import styled from 'styled-components';
 
 const Box = styled.div`
 background-color: #000000;
-min-height:100vh;
+min-height:90vh;
 min-width:100vw;
-padding-bottom:10%;
+padding-bottom:5rem;
 position:relative;
 color: #FFFFFF;
+@media (max-width:600px){
+    padding-bottom:5rem;
+}
 `
 
 
@@ -30,7 +33,14 @@ function Chat() {
             setMessages(messages);
         });
         return () => unsubscribe();
+
+        
     },[]);
+
+    const messagesEndRef = useRef(null);
+    useEffect(() => {
+      messagesEndRef.current?.scrollIntoView({behavior : 'smooth'});
+    },[messages])
     // console.log(messages);
 
 
@@ -50,6 +60,7 @@ function Chat() {
     {/* Send Message Component */}
     <SendMessage />
         {/* Scroll Component */}
+        <div className="dummy" ref={messagesEndRef}/>
          
     </Box>
   )

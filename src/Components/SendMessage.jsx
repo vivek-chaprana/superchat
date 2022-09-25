@@ -27,7 +27,9 @@ const SendMessage = () => {
   };
 
   return (
+    <div className="outerFormDiv">
     <div className="formDiv">
+
 
     <form onSubmit={sendMessage}>
       <input
@@ -40,10 +42,11 @@ const SendMessage = () => {
       <div className="submitBtn" >
       <button type="submit">
 
-      <Plane width="40" fill="#FAFAFA" />
+      <Plane width={window.innerWidth<481 ? 20 : 40} fill="#FAFAFA" />
       </button>
       </div>
     </form>
+    </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .centerDiv{
-  margin: 0 1rem;
+  margin: 0 0rem;
 }
 .mine,
 .enemy {
@@ -43,28 +43,96 @@
   background-color: #252525;
   padding: 1rem;
   border-radius: 25px;
+  max-width: 85vw;
+  overflow: auto;
 }
 .myText {
   background-color: #2971e7;
   
 }
-
+.outerFormDiv{
+  position: absolute;
+  bottom: 0;
+  width:100%;
+  padding:0 2rem 0 1rem ;
+}
 .formDiv{
-    width: 100%;
-    margin:0;
-    position: absolute;
-    bottom: 0;
-
-
+  display: flex;
+  justify-content:center;
 }
 .formDiv form{
+  display: flex;
+  background-color: #252525;
+  width : 100%;
+  border-radius: 25px;
+  justify-content:space-between;
+  border:none;
+  text-decoration: none;
+}
+
+.formDiv input{
+  background-color: #252525;
+  border: none;
+  color: #F9F9F9;
+  font-family: monospace;
+  margin: 0 1rem 0 2rem;
+  min-width: 90%;
+  font-size:1.2rem;
+
+}
+input:focus{
+  outline: none;
+}
+.submitBtn{
+  border-radius: 50%;
+  padding:.4rem;
+  background-color:#252525;
+  margin: 0 1.5rem 0 0;
+}
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+button {
+    border: none;
+}
+
+button:focus {
+    border: none;
+    outline: none;
+}
+
+button:focus{
+    outline:none !important;
+}
+
+/* .formDiv{
+  width:95vw;
+    margin:0;
+    position: absolute;
+    bottom: 1%;
+    border-radius: 25px;
+    border: 1px solid white;
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+ 
+}
+.formDiv form{
+  
     display: flex;
     border: none;
     text-decoration: none;
 
 } 
 .formDiv input{
-    width: 90%;
+    width:87%;
     background-color: #252525;
     margin: 0;
     border: none;
@@ -106,4 +174,35 @@ button:focus {
 
 button:focus{
     outline:none !important;
+} */
+@media only screen and (max-width: 600px) {
+  .outerFormDiv{
+    width: 100vw;
+    padding:0;
+    margin: 0 0 3px 0;
+  }
+  .formDiv{
+    width:100%;
+    padding:0;
+    margin:0;
+  }
+  .formDiv form{
+    width:90%;
+    min-height:20px ;
+    padding: 5px 1rem;
+  }
+  
+  .formDiv input{
+    font-size:1rem;
+    min-width: none;
+    margin: 0;
+    padding:0;
+  
+  }
+  .submitBtn{
+    border-radius: 50%;
+    background-color:#252525;
+    margin: 0;
+    padding: 0;
+  }
 }

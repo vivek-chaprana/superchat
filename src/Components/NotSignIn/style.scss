@@ -544,8 +544,26 @@ body {
     .wrapper{
       overflow:visible;
     }
+
     .floor{
       width: 200px;
+    }
+    .candles{
+      width: 200px;
+    }
+    .footer p{
+      font-size: 10px;
+    }
+    .wrap2 h2{
+      padding-bottom: 4rem;
+      bottom: 1%;
+    }
+
+  
+  }
+  @media only screen and (max-width: 480px) {
+    .footer p{
+      font-size: 8px;
     }
 
   }
