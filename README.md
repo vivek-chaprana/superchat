@@ -1,5 +1,6 @@
 # Superchat
-## A realtime chat room web application created using
+## A realtime chat room web application 
+#### This application is created using :
 - **[ReactJS](https://reactjs.org/)** : For creating framework on
 - **[Firebase](https://firebase.google.com/)** : For user authentication using Google Account and Storing and Updating messages in realtime on backend
 - **[Styled-Components](https://styled-components.com/)** : For writing css using Javascript.
