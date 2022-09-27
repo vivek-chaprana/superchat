@@ -9,7 +9,7 @@ The site has been deployed on netlify, you can access it here : [Superchat](http
 
 ### Usage
 ```
-git clone https://github.com/Vicky2op/weather-app.git
+git clone https://github.com/vivek-chaprana/superchat.git
 npm install
 npm start
 ```
