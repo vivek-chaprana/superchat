@@ -11,10 +11,11 @@ const Nav = styled.div`
   display: felx;
   color:white;
   width:100vw;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items:center;
   background-color:grey;
   font-family : monospace;
+  ${'' /* height:100px; */}
 
   a{
     text-decoration:none;
@@ -31,7 +32,7 @@ const Nav = styled.div`
 `
 
 const Tittle = styled.a`
-  margin: 0 0 0 5%;
+  margin: 1.5rem 0 1.5rem 5%;
   display: flex;
   img{
     width:2rem;
