@@ -6,3 +6,10 @@
 - **[Styled-Components](https://styled-components.com/)** : For writing css using Javascript.
 
 The site has been deployed on netlify, you can access it here : [Superchat](https://super-chatroom.netlify.app) .
+
+### Usage
+```
+git clone https://github.com/Vicky2op/weather-app.git
+npm install
+npm start
+```
