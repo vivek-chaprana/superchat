@@ -1,7 +1,15 @@
 # Superchat
-## A realtime chat room web application created using
-- **ReactJS** : For creating framework on
-- **Firebase** : For user authentication using Google Account and Storing and Updating messages in realtime on backend
-- **Styled-Components** : For writing css using Javascript.
+## A realtime chat room web application 
+#### This application is created using :
+- **[ReactJS](https://reactjs.org/)** : For creating framework on
+- **[Firebase](https://firebase.google.com/)** : For user authentication using Google Account and Storing and Updating messages in realtime on backend
+- **[Styled-Components](https://styled-components.com/)** : For writing css using Javascript.
 
 The site has been deployed on netlify, you can access it here : [Superchat](https://super-chatroom.netlify.app) .
+
+### Usage
+```
+git clone https://github.com/vivek-chaprana/superchat.git
+npm install
+npm start
+```
