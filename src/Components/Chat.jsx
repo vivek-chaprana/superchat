@@ -4,6 +4,7 @@ import {db} from '../firebase'
 import {query, collection, orderBy, onSnapshot} from 'firebase/firestore'
 import SendMessage from './SendMessage';
 import styled from 'styled-components';
+// import UploadImage from './UploadImage';
 
 
 
@@ -66,6 +67,7 @@ function Chat() {
         <h3>Welcome to superchat. 🤗</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat illo minima nostrum, dicta soluta possimus cum nemo omnis fugiat placeat.</p>
     </Intro>
+    {/* <UploadImage /> */}
     <div>
     {/* Message Component */}
         {messages &&

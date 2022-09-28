@@ -138,7 +138,7 @@ function LogOut() {
   const email = auth.currentUser.email;
   const image = auth.currentUser.photoURL;
 
-  console.log(auth.currentUser);
+  // console.log(auth.currentUser);
 
   return (
     // <Box >
