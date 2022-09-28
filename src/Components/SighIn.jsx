@@ -30,10 +30,19 @@ cursor:pointer;
     margin-right: 1rem;
   }
   &:hover{
-    color: black;
-    border: 1.5px solid black;
+    color: rgba(255,255,255,0.7);
+    border: 1.5px solid rgba(255,255,254,0.7);
     img{
-      filter: invert(0);
+      filter: invert(.7);
+    }
+    p{
+      transform: scale(1.01);
+    }
+
+  }
+  &:active{
+    p{
+      transform: scale(0.98);
     }
   }
 

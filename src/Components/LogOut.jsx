@@ -46,7 +46,7 @@ const Div1 = styled.div`
 `;
 const Div2 = styled.div`
   width: inherit;
-  border: 2px solid red;
+  border: 2px solid rgba(255, 255, 255,0.5)  ;
   display: ${(props) => (props.display ? "block" : "none")};
   position: absolute;
   z-index: 1;
@@ -147,7 +147,7 @@ function LogOut() {
         <p>Google Account &nbsp; | &nbsp;</p>
         <span>
           <p>{name}</p>
-          <img width="35" src={image} alt="" />
+          <img width="35" src={image} alt="User" />
         </span>
       </Div1>
       <Div2 display={display}>
@@ -159,7 +159,7 @@ function LogOut() {
         </SignOutDiv>
         <Div3>
           <ImgDiv>
-            <img src={image} alt="" />
+            <img src={image} alt="User" />
           </ImgDiv>
           <DetailsDiv>
             <h3>{name}</h3>

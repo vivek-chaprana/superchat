@@ -10,13 +10,26 @@ import styled from 'styled-components';
 const Box = styled.div`
 background-color: #000000;
 min-height:90vh;
-min-width:90vw;
+min-width:100vw;
 padding-bottom:5rem;
+padding-top:1rem;
 position:relative;
 color: #FFFFFF;
 @media (max-width:600px){
     padding-bottom:5rem;
 }
+`
+
+const Intro = styled.div`
+font-family: monospace;
+display:flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+justify-content: space-evenly;
+min-height:25vh;
+width:100%;
+background-color:#252525;
 `
 
 
@@ -48,6 +61,11 @@ function Chat() {
 
   return (
     <Box>
+    <Intro>
+        <h2>Superchat 🚀 </h2>
+        <h3>Welcome to superchat. 🤗</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat illo minima nostrum, dicta soluta possimus cum nemo omnis fugiat placeat.</p>
+    </Intro>
     <div>
     {/* Message Component */}
         {messages &&

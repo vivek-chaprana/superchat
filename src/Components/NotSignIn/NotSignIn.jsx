@@ -43,7 +43,7 @@ const NotSignIn = () => {
           Copyright &#169; {year} - <a href="https://vivekchaprana.netlify.app">Vivek Chaprana</a>.
         </p>
           <p>
-          &nbsp; Any suggestions to site, feel free to make a pull request on <a href="https://github.com/vivekchaprana">Github</a> .   
+          &nbsp; Any suggestions to site, feel free to make a pull request on <a href="https://github.com/vivek-chaprana/superchat">Github</a> .   
           </p>
         </div>
       </div>
