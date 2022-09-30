@@ -1,3 +1,4 @@
+
 .centerDiv{
   margin: 0 0rem;
 }
@@ -45,6 +46,7 @@
   border-radius: 25px;
   max-width: 85vw;
   overflow: auto;
+  font-size: larger;
 }
 .myText {
   background-color: #2971e7;
@@ -65,7 +67,6 @@
   background-color: #252525;
   width : 100%;
   border-radius: 25px;
-  justify-content:space-between;
   border:none;
   text-decoration: none;
 }
@@ -75,16 +76,15 @@
   border: none;
   color: #F9F9F9;
   font-family: monospace;
-  margin: 0 1rem 0 2rem;
-  /* min-width: 90%; */
   font-size:1.2rem;
+  width: 100%;
+  margin:0 1rem 0 1rem;
 
 }
 input:focus{
   outline: none;
 }
 .submitBtn{
-  border-radius: 50%;
   padding:.4rem;
   background-color:#252525;
   margin: 0 1.5rem 0 0;
@@ -182,37 +182,12 @@ button:focus{
   opacity: 0;
   visibility: hidden;
 }
-
-
+.LogoImages{
+  filter:invert(0.9);
+}
 
 @media only screen and (max-width: 600px) {
-  .outerFormDiv{
-    width: 100vw;
-    padding:0;
-    margin: 0 0 3px 0;
-  }
-  .formDiv{
-    width:100%;
-    padding:0;
-    margin:0;
-  }
-  .formDiv form{
-    width:95%;
-    min-height:20px ;
-    padding: 5px 1rem;
-  }
-  
-  .formDiv input{
-    font-size:1rem;
-    min-width: none;
-    margin: 0;
-    padding:0;
-  
-  }
-  .submitBtn{
-    border-radius: 50%;
-    background-color:#252525;
-    margin: 0;
-    padding: 0;
+  .text {
+    font-size:12px;
   }
 }

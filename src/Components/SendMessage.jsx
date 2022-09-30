@@ -3,82 +3,72 @@ import { auth, db, storage } from "../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
-import { Plane } from "./Svg";
+import Plane from "../assets/paper-plane.svg";
 import imgLogo from "../assets/image.svg";
 import styled from "styled-components";
 import Cancel from "../assets/cancel.png";
 
 const FormDiv = styled.div`
-  display: ${(props) => (props.display ? "none" : "flex")};
+  display: flex;
+  @media (max-width:480px){
+    input {
+      font-size:.8rem;
+    }
+  }
 `;
 const WrapOfPopUp = styled.div`
   display: ${(props) => (props.display ? "flex" : "none")};
   z-index: 10;
-  background-color: transparent;
+  background-color: rgba(250, 250, 250, 0.4);
   justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  bottom: 0;
 `;
 const PopUpImage = styled.div`
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  width: 50%;
-  height: 60%;
-  border: 1px solid cyan;
+  width: 60%;
+  height: 70%;
   background-color: #252525;
+  border: 1px solid black;
 
   @media (max-width: 600px) {
-    width: 95%;
-    height: 90%;
+    width: 90%;
+    height: 80%;
   }
-
 `;
 
 const CenterImageDiv = styled.div`
   width: 100%;
+  height: 80%;
   background-color: #252525;
   display: flex;
   justify-content: center;
 `;
 
 const ImgDiv = styled.div`
-  height:20rem;
-  
-
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
 
   img {
-    height: 100%;
-    width: auto;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    object-fit: scale-down;
     overflow: hidden;
-    border: 2px dotted black;
   }
-  ${'' /* @media (max-width:1200px){
-    height:17rem;
-
-  }
-  @media (max-width:1000px){
-    height:14.5rem;
-
-  }
-  @media (max-width:800px){
-    height:11rem;
-
-  }
-  @media (max-width:480px){
-    height:11rem;
-
-  }
-  @media (max-width:340px){
-    height:10rem;
-
-  } */}
 `;
 const CrossBtn = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
   img {
-    margin: 1rem 1rem 0 0;
+    margin: 5px 5px 0 0;
   }
   img:hover {
     transform: scale(1.1);
@@ -93,8 +83,31 @@ const SubmitBtn = styled.div`
   justify-content: center;
 
   button {
-    margin: 1rem 0;
+    margin: 5px 0;
   }
+`;
+
+const ImageLogo = styled.div`
+  margin: auto 0 auto 1rem;
+  img {
+    width: 40px;
+  }
+  @media (max-width:480px){
+    img{
+      width: 20px;
+    }
+  }
+`;
+const PlaneLogo = styled.div`
+margin: .25rem 1rem .25rem 0;
+img {
+  width: 40px;
+}
+@media (max-width:480px){
+  img{
+    width: 20px;
+  }
+}
 `;
 
 const SendMessage = () => {
@@ -104,7 +117,7 @@ const SendMessage = () => {
   const [phile, setPhile] = useState();
   const [display, setDisplay] = useState(false);
   const [btnActiveClass, setBtnActiveClass] = useState();
-
+  console.log(progresspercent);
   const handleImageUpload = async (e) => {
     const { uid, displayName } = auth.currentUser;
     const photo = auth.currentUser.photoURL;
@@ -184,6 +197,7 @@ const SendMessage = () => {
           <CrossBtn>
             <img
               width="36px"
+              alt=""
               src={Cancel}
               onClick={() => {
                 setPhile();
@@ -235,17 +249,16 @@ const SendMessage = () => {
               accept="image/*"
               onChange={checkImg}
             />
-            <div>
+            <ImageLogo>
               <img
+                className="LogoImages" 
                 onClick={(e) => {
                   hiddenFileInput.current.click();
                 }}
-                width="40px"
                 src={imgLogo}
                 alt=""
-                style={{ filter: "invert(0.9)" }}
               />
-            </div>
+            </ImageLogo>
 
             <input
               className="inputMsg"
@@ -254,14 +267,15 @@ const SendMessage = () => {
               onChange={(e) => setInput(e.target.value)}
               placeholder="Enter Message Here"
             />
-            <div className="submitBtn">
+            <PlaneLogo className="submitBtn">
               <button ref={submitBtn} type="submit">
-                <Plane
-                  width={window.innerWidth < 481 ? 20 : 40}
-                  fill="#FAFAFA"
+                <img
+                  className="LogoImages"
+                  src={Plane}
+                  alt=""
                 />
               </button>
-            </div>
+            </PlaneLogo>
           </form>
         </FormDiv>
       </div>

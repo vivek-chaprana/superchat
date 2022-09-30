@@ -61,6 +61,7 @@ function Chat() {
 
 
   return (
+        <>
     <Box>
     <Intro>
         <h2>Superchat 🚀 </h2>
@@ -80,9 +81,11 @@ function Chat() {
     {/* Send Message Component */}
     <SendMessage />
         {/* Scroll Component */}
-        <div className="dummy" ref={messagesEndRef}/>
          
     </Box>
+        <div className="dummy" ref={messagesEndRef}/>
+
+        </>
   )
 }
 
