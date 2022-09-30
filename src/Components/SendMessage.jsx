@@ -93,6 +93,12 @@ const ImageLogo = styled.div`
   img {
     width: 40px;
   }
+  img:hover{
+    opacity: .9;
+  }
+  img:active{
+    transform: scale(0.95);
+  }
   @media (max-width:480px){
     img{
       width: 20px;
@@ -104,6 +110,12 @@ margin: .25rem 1rem .25rem 0;
 img {
   width: 40px;
 }
+img:hover{
+    opacity: .9;
+  }
+  img:active{
+    transform: scale(0.95);
+  }
 @media (max-width:480px){
   img{
     width: 20px;

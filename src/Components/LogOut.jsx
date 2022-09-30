@@ -6,7 +6,6 @@ import logo from "../assets/messages.svg";
 
 const Box = styled.div`
   margin-right: 50px;
-  border:1px solid green;
 
   @media (max-width: 600px) {
     width: auto;

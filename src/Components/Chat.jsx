@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Message from './Message'
-import {db} from '../firebase'
+import {db,auth} from '../firebase'   
 import {query, collection, orderBy, onSnapshot} from 'firebase/firestore'
 import SendMessage from './SendMessage';
 import styled from 'styled-components';
@@ -28,10 +28,25 @@ flex-direction: column;
 align-items: center;
 text-align: center;
 justify-content: space-evenly;
-min-height:25vh;
+min-height:20vh;
 width:100%;
 background-color:#252525;
 `
+const FirstMsg = styled.h3`
+font-size: 20px;
+
+@media (max-width: 600px) {
+    font-size: 16px;
+}
+`
+const SecondMsg = styled.h3`
+font-size: 16px;
+
+@media (max-width: 600px) {
+    font-size: 12px;
+}
+`
+
 
 
 function Chat() {
@@ -55,7 +70,6 @@ function Chat() {
     useEffect(() => {
       messagesEndRef.current?.scrollIntoView({behavior : 'smooth'});
     },[messages])
-    // console.log(messages);
 
 
 
@@ -64,9 +78,8 @@ function Chat() {
         <>
     <Box>
     <Intro>
-        <h2>Superchat 🚀 </h2>
-        <h3>Welcome to superchat. 🤗</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat illo minima nostrum, dicta soluta possimus cum nemo omnis fugiat placeat.</p>
+        <FirstMsg>Hey , {auth.currentUser.displayName} <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="24px" alt="" /> </FirstMsg>
+        <SecondMsg>Welcome to superchat. I’ve heard great things about you.🤗</SecondMsg>
     </Intro>
     {/* <UploadImage /> */}
     <div>
