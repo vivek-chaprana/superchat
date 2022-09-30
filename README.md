@@ -5,7 +5,13 @@
 - **[Firebase](https://firebase.google.com/)** : For user authentication using Google Account and Storing and Updating messages in realtime on backend
 - **[Styled-Components](https://styled-components.com/)** : For writing css using Javascript.
 
-The site has been deployed on netlify, you can access it here : [Superchat](https://super-chatroom.netlify.app) .
+#### And have features like :
+- Secure sign in using Google Authentication 🔐.
+- Cloud storage and backup of all messages ☁ .
+- Cross platform connection 💻📱 .
+- Realtime text messages and photos sharing via Firebase Database and Storage 🚀.
+
+**The site has been deployed on [Netlify](https://www.netlify.com/), you can access it here : [Superchat](https://super-chatroom.netlify.app)** .
 
 ### Usage
 ```
