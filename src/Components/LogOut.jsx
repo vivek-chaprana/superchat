@@ -5,8 +5,8 @@ import styled from "styled-components";
 import logo from "../assets/messages.svg";
 
 const Box = styled.div`
-  width: 22%;
-  margin-right: 10rem;
+  margin-right: 50px;
+  border:1px solid green;
 
   @media (max-width: 600px) {
     width: auto;
@@ -45,7 +45,7 @@ const Div1 = styled.div`
   }
 `;
 const Div2 = styled.div`
-  width: inherit;
+  width: 300px;
   border: 2px solid rgba(255, 255, 255,0.5)  ;
   display: ${(props) => (props.display ? "block" : "none")};
   position: absolute;
@@ -64,7 +64,7 @@ const Div2 = styled.div`
   }
 
   @media (max-width: 600px) {
-    width: 80%;
+    width: 300px;
     right: 0;
 
     a {
@@ -150,7 +150,7 @@ function LogOut() {
           <img width="35" src={image} alt="User" />
         </span>
       </Div1>
-      <Div2 display={display}>
+      <Div2 display={display ? 1 : undefined}>
         <SignOutDiv>
           <Brand>
             Superchat <img src={logo} alt="" />{" "}

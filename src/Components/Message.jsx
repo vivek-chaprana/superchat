@@ -9,17 +9,22 @@ const Message = ({ message }) => {
       <div className="centerDiv">
         <div className={isUser ? "mine" : "enemy"}>
           <div className={isUser ? "mineMsg" : "enemyMsg"}>
-            <p className="name">{message.name}</p>
+          {"imageURL" in message ? ( <br></br>) : (
+            <p className="name">{message.name}</p>)}
             <div className={isUser ? "myImgAndText" : "enemyImgAndText"}>
-              <img className="profileImg" src={message.photo} alt="" />
+              <img className="profileImg" src={message.photo} alt=""  />
               <div className={isUser ? "myText text" : "enemyText text"}>
                 {"imageURL" in message ? (
                 // eslint-disable-next-line
+                <a href={message.imageURL} target="_blank">
+                  <div className="photuDiv">
                   <img
                     className="photu"
                     src={message.imageURL}
-                    alt="[ Failed to load image ]"
+                    alt="[ Failed to load souvenir.  ]" 
                   />
+                  </div>
+                </a>
                 ) : (
                   <p>{message.text}</p>
                 )}

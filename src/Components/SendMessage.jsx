@@ -69,6 +69,7 @@ const CrossBtn = styled.div`
   justify-content: flex-end;
   img {
     margin: 5px 5px 0 0;
+    cursor:pointer;
   }
   img:hover {
     transform: scale(1.1);
@@ -118,6 +119,8 @@ const SendMessage = () => {
   const [display, setDisplay] = useState(false);
   const [btnActiveClass, setBtnActiveClass] = useState();
   console.log(progresspercent);
+
+  
   const handleImageUpload = async (e) => {
     const { uid, displayName } = auth.currentUser;
     const photo = auth.currentUser.photoURL;
@@ -188,11 +191,10 @@ const SendMessage = () => {
   //Hidden file input
   const hiddenFileInput = useRef(null);
   const submitBtn = useRef(null);
-  console.log("display : ", display);
 
   return (
     <>
-      <WrapOfPopUp display={display}>
+      <WrapOfPopUp display={display ? 1 : undefined}>
         <PopUpImage>
           <CrossBtn>
             <img
@@ -221,10 +223,10 @@ const SendMessage = () => {
                 }, 1000);
               }}
               id="button"
-              class={btnActiveClass}
+              className={btnActiveClass}
             >
               <span>Send</span>
-              <div class="success">
+              <div className="success">
                 <svg
                   viewBox="0 0 29.756 29.756"
                   style={{
@@ -240,7 +242,7 @@ const SendMessage = () => {
         </PopUpImage>
       </WrapOfPopUp>
       <div className="outerFormDiv">
-        <FormDiv display={display} className="formDiv">
+        <FormDiv display={display ? 1 : undefined} className="formDiv">
           <form onSubmit={isfile ? handleImageUpload : sendMessage}>
             <input
               ref={hiddenFileInput}

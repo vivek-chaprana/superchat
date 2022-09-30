@@ -11,7 +11,7 @@ import styled from 'styled-components';
 const Box = styled.div`
 background-color: #000000;
 min-height:90vh;
-min-width:100vw;
+min-width:95vw;
 padding-bottom:5rem;
 padding-top:1rem;
 position:relative;

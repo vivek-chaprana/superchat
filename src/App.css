@@ -40,12 +40,25 @@
   margin: 0.1rem 0.7rem 0.5rem 0.5rem;
   border: 0.7px solid #fafafa;
 }
+.photuDiv{
+  border: 1px solid transparent;
+  height: 400px;
+  width:auto;
+}
+.photu{
+    height: 100%;
+    width:auto;
+    object-fit: scale-down;
+    overflow: hidden;
+  }
+
 .text {
   background-color: #252525;
   padding: 1rem;
   border-radius: 25px;
   max-width: 85vw;
-  overflow: auto;
+  max-height: auto;
+  overflow: hidden;
   font-size: larger;
 }
 .myText {
@@ -144,8 +157,6 @@ button:focus{
   position: absolute;
   top: 0;
   left: 0;
-  /* width: 100%;
-  height: 100%; */
   background: #fff;
   border-radius: 50%;
   z-index: 1;
@@ -154,40 +165,35 @@ button:focus{
   transition: all .35s;
 }
 
-.success svg{
-  width: 20px;
-  height: 20px;
-  fill: yellowgreen;
-  transform-origin: 50% 50%;
-  transform: translateY(-50%) rotate(0deg) scale(0);
-  transition: all .35s;
-}
-
-#button.is_active{
-  width: 40px;
-  height: 40px;
-}
-
-#button.is_active .success{
-  opacity: 1;
-  visibility: visible;
-}
-
-#button.is_active .success svg{
-  margin-top: 50%;
-  transform: translateY(-50%) rotate(720deg) scale(1);
-}
-
-#button.is_active span{
-  opacity: 0;
-  visibility: hidden;
-}
 .LogoImages{
   filter:invert(0.9);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
+  .photuDiv{
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .photuDiv{
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
   .text {
     font-size:12px;
+    max-width: 70vw;
   }
+  .photuDiv{
+    height: auto;
+    width:100%;
+  }
+  .photu{
+      height: auto;
+      width:100%;
+      object-fit: scale-down;
+      overflow: hidden;
+    }
 }

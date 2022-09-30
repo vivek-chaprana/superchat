@@ -8,14 +8,13 @@ import styled from 'styled-components'
 import MsgIco from '../assets/messages.svg' 
 
 const Nav = styled.div`
-  display: felx;
+  display: flex;
   color:white;
   width:100vw;
   justify-content: space-between;
   align-items:center;
   background-color:grey;
   font-family : monospace;
-  ${'' /* height:100px; */}
 
   a{
     text-decoration:none;
