@@ -10,8 +10,7 @@ margin: 1% 5% 1% 0;
 
 const googleSignIn = () => {
   const provider = new GoogleAuthProvider();
-  signInWithRedirect(auth, provider)
-  // signInWithPopup(auth,provider);
+  signInWithRedirect(auth, provider);
 }
 
 const GoogleBtn= styled.div`
