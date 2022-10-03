@@ -90,6 +90,7 @@ const SubmitBtn = styled.div`
 
 const ImageLogo = styled.div`
   margin: auto 0 auto 1rem;
+  cursor : pointer;
   img {
     width: 40px;
   }
