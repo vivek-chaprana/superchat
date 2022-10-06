@@ -126,12 +126,10 @@ img:hover{
 
 const SendMessage = () => {
   const [isfile, setisFile] = useState(false);
-  const [progresspercent, setProgresspercent] = useState(0);
   const [input, setInput] = useState("");
   const [phile, setPhile] = useState();
   const [display, setDisplay] = useState(false);
   const [btnActiveClass, setBtnActiveClass] = useState();
-  console.log(progresspercent);
 
   
   const handleImageUpload = async (e) => {
@@ -146,13 +144,6 @@ const SendMessage = () => {
     const uploadTask = uploadBytesResumable(storageRef, file);
     //To display upload progress
     uploadTask.on(
-      "state_changed",
-      (snapshot) => {
-        const progress = Math.round(
-          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-        );
-        setProgresspercent(progress);
-      },
       //if upload fails
       (error) => {
         alert(error);

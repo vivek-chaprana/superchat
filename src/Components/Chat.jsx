@@ -41,6 +41,7 @@ font-size: 20px;
 `
 const SecondMsg = styled.h3`
 font-size: 16px;
+max-width: 80vw;
 
 @media (max-width: 600px) {
     font-size: 12px;
