@@ -133,9 +133,9 @@ const SendMessage = () => {
 
   
   const handleImageUpload = async (e) => {
+    e.preventDefault();
     const { uid, displayName } = auth.currentUser;
     const photo = auth.currentUser.photoURL;
-    e.preventDefault();
     //Check if file selected
     const file = e.target[0]?.files[0];
     if (!file) return;
