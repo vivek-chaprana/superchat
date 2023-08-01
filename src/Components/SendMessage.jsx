@@ -10,9 +10,9 @@ import Cancel from "../assets/cancel.png";
 
 const FormDiv = styled.div`
   display: flex;
-  @media (max-width:480px){
+  @media (max-width: 480px) {
     input {
-      font-size:.8rem;
+      font-size: 0.8rem;
     }
   }
 `;
@@ -69,7 +69,7 @@ const CrossBtn = styled.div`
   justify-content: flex-end;
   img {
     margin: 5px 5px 0 0;
-    cursor:pointer;
+    cursor: pointer;
   }
   img:hover {
     transform: scale(1.1);
@@ -90,38 +90,38 @@ const SubmitBtn = styled.div`
 
 const ImageLogo = styled.div`
   margin: auto 0 auto 1rem;
-  cursor : pointer;
+  cursor: pointer;
   img {
     width: 40px;
   }
-  img:hover{
-    opacity: .9;
+  img:hover {
+    opacity: 0.9;
   }
-  img:active{
+  img:active {
     transform: scale(0.95);
   }
-  @media (max-width:480px){
-    img{
+  @media (max-width: 480px) {
+    img {
       width: 20px;
     }
   }
 `;
 const PlaneLogo = styled.div`
-margin: .25rem 1rem .25rem 0;
-img {
-  width: 40px;
-}
-img:hover{
-    opacity: .9;
+  margin: 0.25rem 1rem 0.25rem 0;
+  img {
+    width: 40px;
   }
-  img:active{
+  img:hover {
+    opacity: 0.9;
+  }
+  img:active {
     transform: scale(0.95);
   }
-@media (max-width:480px){
-  img{
-    width: 20px;
+  @media (max-width: 480px) {
+    img {
+      width: 20px;
+    }
   }
-}
 `;
 
 const SendMessage = () => {
@@ -131,7 +131,6 @@ const SendMessage = () => {
   const [display, setDisplay] = useState(false);
   const [btnActiveClass, setBtnActiveClass] = useState();
 
-  
   const handleImageUpload = async (e) => {
     e.preventDefault();
     const { uid, displayName } = auth.currentUser;
@@ -257,7 +256,7 @@ const SendMessage = () => {
             />
             <ImageLogo>
               <img
-                className="LogoImages" 
+                className="LogoImages"
                 onClick={(e) => {
                   hiddenFileInput.current.click();
                 }}
@@ -275,11 +274,7 @@ const SendMessage = () => {
             />
             <PlaneLogo className="submitBtn">
               <button ref={submitBtn} type="submit">
-                <img
-                  className="LogoImages"
-                  src={Plane}
-                  alt=""
-                />
+                <img className="LogoImages" src={Plane} alt="" />
               </button>
             </PlaneLogo>
           </form>
